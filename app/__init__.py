@@ -1,6 +1,7 @@
-from flask import Flask
+from flask import Flask, render_template
 
-from .config import Config
+from app.config import Config
+from app.extensions import db
 
 def create_app(config_class=Config):
     app = Flask(__name__)
@@ -12,8 +13,9 @@ def create_app(config_class=Config):
     from app.module_main import bp as main_bp
     app.register_blueprint(main_bp)
 
-    @app.route('/test/')
-    def test_page():
-        return '<h1>Testing the Flask Application Factory Pattern</h1>'
+    @app.route('/test')
+    def test():
+        return render_template('test.html')
+
 
     return app

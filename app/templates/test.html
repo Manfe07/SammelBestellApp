@@ -1,0 +1,59 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div id="content" class="container-fluid content">
+    <div class="row"> <!-- Hier kannst du weitere Inhalte hinzufügen -->
+        <!-- Plan Sequence -->
+        <div class="col-md-12 d-flex flex-column">
+            <div class="card m-2">
+                <h5 class="card-header">Essensgruppe</h5>
+                <div class="card-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Nr.</th>
+                                <th></th>
+                                <th data-field="price" data-halign="left" data-align="right">Klein</th>
+                                <th data-field="price" data-halign="left" data-align="right">Mittel</th>
+                                <th data-field="price" data-halign="left" data-align="right">Groß</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1a</td>
+                                <td>
+                                    <b>Hawaii</b><br>
+                                    Tomatensauce, Käse, Schinken, Annanas
+                                </td>
+                                <th data-field="price" data-halign="left" data-align="right">5.00</th>
+                                <th data-field="price" data-halign="left" data-align="right">6.00</th>
+                                <th data-field="price" data-halign="left" data-align="right">7.00</th>
+                            </tr>
+                            <tr>
+                                <td>1a</td>
+                                <td>
+                                    <b>Hawaii</b><br>
+                                    Tomatensauce, Käse, Schinken, Annanas
+                                </td>
+                                <th data-field="price" data-halign="left" data-align="right">5.00</th>
+                                <th data-field="price" data-halign="left" data-align="right">6.00</th>
+                                <th data-field="price" data-halign="left" data-align="right">7.00</th>
+                            </tr>
+                            <tr>
+                                <td>1a</td>
+                                <td>
+                                    <b>Hawaii</b><br>
+                                    Tomatensauce, Käse, Schinken, Annanas
+                                </td>
+                                <th data-field="price" data-halign="left" data-align="right">5.00</th>
+                                <th data-field="price" data-halign="left" data-align="right">6.00</th>
+                                <th data-field="price" data-halign="left" data-align="right">7.00</th>
+                            </tr> <!-- Add more rows as needed -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
