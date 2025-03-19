@@ -1,4 +1,4 @@
-from flask import render_template, request, flash, session, redirect, url_for
+from flask import render_template, request, flash , session, redirect, url_for
 
 from app.module_users import bp
 from app.module_users.models import User
