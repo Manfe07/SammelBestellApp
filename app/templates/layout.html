@@ -21,24 +21,31 @@
 </head>
 
 <body>
+
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
             <a class="navbar-brand" href="{{ url_for('main.index')}}">
                 <img src="/static/images/kebab.svg" width="30" height="30" class="d-inline-block align-top" style="color:var(--bs-secondary)" alt="">
+                
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-
                     <li class="nav-item">
                         <a class="nav-link" href="#">Bestellen</a>
                     </li>
 
+                    {% if session['permission']|default(0, true) >= 1 %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('users.logout')}}">Logout</a>
+                    </li>
+                    {% endif %}
+
                     {% if session['permission']|default(0, true) <= 0 %}
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Login</a>
+                        <a class="nav-link" href="{{ url_for('users.login')}}">Login</a>
                     </li>
                     {% endif %}
                     {% if session['permission']|default(0, true) >= 2 %}
@@ -47,11 +54,8 @@
                             Verwalten
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Artikel</a></li>
-                            <li><a class="dropdown-item" href="#">Käufe</a></li>
                             {% if session['permission'] >= 3 %}
-                            <li><a class="dropdown-item" href="#">Einstellungen</a></li>
-                            <li><a class="dropdown-item" href="#">Benutzer</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('users.manageUsers') }}">Benutzer</a></li>
                             {% endif %}
                         </ul>
                     </li>
@@ -63,6 +67,7 @@
             </div>
         </div>
     </nav>
+
     <div class="content">
         {% block content%}
         {% endblock %}
