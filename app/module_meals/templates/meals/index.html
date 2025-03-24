@@ -1,0 +1,49 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class='container'>
+    {% for restaurant in restaurants %}
+    <div class='card'>
+        <div class='card-header'>
+            <h1>{{restaurant.name}}</h1>
+        </div>
+        <div class='card-body'>
+            <p style="text-align: center;">
+                {{restaurant.description}}<br>
+                <a target="_blank" href="{{restaurant.website}}">{{restaurant.website}}</a><br>
+                <a href="tel:{{restaurant.phone}}">{{restaurant.phone}}</a>
+
+            </p>
+        </div>
+    </div>
+    {% for mealgroup in restaurant.mealgroups %}
+    <div class='card'>
+        <div class='card-header'>
+            <h2>{{mealgroup.name}}</h2>
+        </div>
+        <div class='card-body'>
+            <table class="table">
+                <tbody>
+                    {% for meal in mealgroup.meals %}
+                    <tr>
+                        <td>{{meal.number}}</td>
+                        <td>
+                            <b>{{meal.name}}</b><br>
+                            {{meal.description}}
+                            <br>{{'{:.2f}€'.format(meal.price_1|float)}}
+                            {% if meal.price_2 %} - {{'{:.2f}€'.format(meal.price_2|float)}}{% endif%}
+                            {% if meal.price_3 %} - {{'{:.2f}€'.format(meal.price_3|float)}}{% endif%}
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-primary">Bestellen</button>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    {% endfor %}
+    {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,104 @@
+[
+    {
+        "name": "Efes",
+        "description": "Grill & Pizzeria in Emsbüren​​​",
+        "phone": "+4959032179604",
+        "website": "https://www.efes-emsbueren.de/",
+        "mealgroups": [
+            {
+                "name": "Kebab vom Drehspieß",
+                "number": "001",
+                "meals": [
+                    {
+                        "number": "1",
+                        "name": "Efes Kebab",
+                        "description": "Fladenbrot, Kebabfleisch, Eisbergsalat, Krautsalat, Zwiebeln, Tomaten, Zaziki",
+                        "price_1": 6.5,
+                        "price_2": 7.5,
+                        "price_3": 8.5
+                    },
+                    {
+                        "number": "1b",
+                        "name": "Falafel Kebab",
+                        "description": "Fladenbrot, Falafel, Krautsalat, Eisbergsalat, Zwiebeln, Tomaten, Mais, Zaziki",
+                        "price_1": 6,
+                        "price_2": 7,
+                        "price_3": 8
+                    },
+                    {
+                        "number": "1c",
+                        "name": "Großstadt Kebab",
+                        "description": "Kebabfleisch, Eisbergsalat, frische Tomaten, Krautsalat, Zaziki oder Cocktailsauce",
+                        "price_1": 5.5
+                    },
+                    {
+                        "number": "2",
+                        "name": "Efes Kebab Spezial",
+                        "description": "Fladenbrot, Kebabfleisch, Goudakäse oder Weichkäse, Eisbergsalat, Krautsalat",
+                        "price_1": 7.5,
+                        "price_2": 8.5,
+                        "price_3": 9.5
+                    },
+                    {
+                        "number": "2b",
+                        "name": "Efes Chili Cheese Kebab",
+                        "description": "Fladenbrot, Kebabfleisch, Goudakäse, scharfe Peperoni, Chili Cheese Sauce",
+                        "price_1": 7.5,
+                        "price_2": 8.5,
+                        "price_3": 9.5
+                    },
+                    {
+                        "number": "3",
+                        "name": "Efes Hähnchen Kebab",
+                        "description": "Fladenbrot, Hähnchenfleisch, Eisbergsalat, Krautsalat, Zwiebeln, Tomaten, Zaziki",
+                        "price_1": 6.5,
+                        "price_2": 7.5,
+                        "price_3": 8.5
+                    },
+                    {
+                        "number": "4",
+                        "name": "Efes Hähnchen Kebab Spezial",
+                        "description": "Fladenbrot, Hähnchenfleisch, Goudakäse oder Weichkäse, Salat, Zaziki",
+                        "price_1": 7.5,
+                        "price_2": 8.5,
+                        "price_3": 9.5
+                    },
+                    {
+                        "number": "5",
+                        "name": "Türkische Pizza",
+                        "description": "Fladenbrot, Rindergehacktes, Eisbergsalat, Krautsalat, Zwiebeln, Tomaten, Zaziki",
+                        "price_1": 6,
+                        "price_2": 7,
+                        "price_3": 8
+                    },
+                    {
+                        "number": "6",
+                        "name": "Türkische Pizza Spezial",
+                        "description": "Fladenbrot, Rindergehacktes, Goudakäse, Eisbergsalat, Krautsalat, Zwiebeln",
+                        "price_1": 6.5,
+                        "price_2": 7.5,
+                        "price_3": 8.5
+                    },
+                    {
+                        "number": "7",
+                        "name": "Hähnchen Teller",
+                        "description": "Hähnchenfleisch, Salat, Zaziki, Fladenbrot oder Pommes",
+                        "price_1": 11
+                    },
+                    {
+                        "number": "8",
+                        "name": "Kebab Teller",
+                        "description": "Kebabfleisch, Salat, Zaziki, Fladenbrot oder Pommes",
+                        "price_1": 11
+                    },
+                    {
+                        "number": "8b",
+                        "name": "Falafel Teller",
+                        "description": "Falafel, Salat, Zaziki, Fladenbrot oder Pommes",
+                        "price_1":  10
+                    }
+                ]
+            }
+        ]
+    }
+]

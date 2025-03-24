@@ -172,5 +172,7 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
-app/__init__.py
+
+
 app/app.db
+data/
