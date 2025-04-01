@@ -26,6 +26,8 @@ def create_app(config_class=Config):
         app.register_blueprint(users.bp, url_prefix="/users")
         import app.module_meals as meals
         app.register_blueprint(meals.bp, url_prefix="/meals")
+        import app.module_orders as orders
+        app.register_blueprint(orders.bp, url_prefix="/orders")
 
         db.create_all()
         meals.tools.loadRestaurants()

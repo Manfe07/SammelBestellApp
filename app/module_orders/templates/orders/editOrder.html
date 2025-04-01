@@ -1,0 +1,58 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class='container'>
+    <div class='card'>
+        <div class='card-header'>
+            <h1>Bestellen</h1>
+        </div>
+        <div class='card-body'>
+            <form>
+                <h3>Auswahl:</h3>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                Nr.
+                            </td>
+                            <td>
+                                {{meal.number}} - {{meal.name}}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="size">Größe:</label>
+                            </td>
+                            <td>
+                                {% if meal.price_1 %}<option value=1>
+                                {% if not (meal.price_2 or meal.price_3) %}
+                                <label for="size">Einheitsgröße {{'{:.2f}€'.format(meal.price_1|float)}}</label><br>
+                                <input type="hidden" id="size" name="Größe" value=1>
+                                {% else %}
+                                <select id="size" name="Größe">
+                                    <option value=1>
+                                        Klein - {{'{:.2f}€'.format(meal.price_1|float)}}
+                                    </option>
+                                    {% if meal.price_2 %}<option value=2>
+                                        Mittel - {{'{:.2f}€'.format(meal.price_2|float)}}
+                                    </option> {% endif%}
+                                    {% if meal.price_3 %}<option value=3>
+                                        Groß - {{'{:.2f}€'.format(meal.price_3|float)}}
+                                    </option> {% endif%}
+                                </select>
+                                {% endif%}
+                            </td>
+                        </tr>
+                        {% endif %}
+                        <tr>
+                            <td>
+                                <input type="submit">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
